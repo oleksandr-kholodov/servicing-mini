@@ -1,0 +1,6 @@
+loan_number,borrower_name,borrower_email,borrower_phone,property_address,original_balance,current_balance,interest_rate,origination_date,maturity_date,status
+BCN-2022-001,Alicia Moreno,a.moreno@homenet.com,555-100-2222,"3320 Lakeview Dr Phoenix AZ 85001",340000,318900.00,0.0395,2022-05-01,2052-05-01,current
+BCN-2021-002,Frederick Hayes,fhayes@retiremail.net,555-200-4444,"88 Canyon Rd Tucson AZ 85701",290000,251600.00,0.0360,2021-02-14,2051-02-14,current
+BCN-2023-003,Monique Dubois,m.dubois@artgallery.org,555-300-6666,"1975 Desert Rose Blvd Scottsdale AZ 85251",720000,712000.00,0.0490,2023-07-01,2053-07-01,current
+BCN-2020-004,William Santos,,555-400-8888,"514 Palo Verde Way Mesa AZ 85201",185000,148320.00,0.0340,2020-01-15,2050-01-15,delinquent
+BCN-2022-005,Rachel Goldstein,rgold@lawfirm.com,555-500-1111,"2601 Saguaro Pass Chandler AZ 85224",560000,541200.00,0.0430,2022-10-20,2052-10-20,current
