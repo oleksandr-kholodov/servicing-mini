@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# next.js
+.next/
+out/
+
+# env files (keep .env.example)
+.env
+.env.local
+.env.*.local
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+pnpm-debug.log*
+
+# drizzle
+# keep migrations but ignore meta snapshots if desired
+next-env.d.ts
+tsconfig.tsbuildinfo
+/.next/
