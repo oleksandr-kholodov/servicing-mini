@@ -4,7 +4,7 @@ AI-ops for private mortgage servicers. Built as a portfolio piece for the **Serv
 
 **Stack**: Next.js 15 (App Router) · TypeScript · PostgreSQL · Drizzle ORM · Tailwind · Vitest · Zod
 
-**Live demo**: _<add Vercel URL after deploy>_
+**Live demo**: https://servicing-mini.netlify.app
 
 ---
 
