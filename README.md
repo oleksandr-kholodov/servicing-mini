@@ -17,21 +17,31 @@ AI-ops for private mortgage servicers. Built as a portfolio piece for the **Serv
 
 ---
 
+## Prerequisites
+
+- **Node.js 20+** and **pnpm 9+** (`npm i -g pnpm`)
+- **PostgreSQL 14+** (local install or Docker — see Option B)
+
 ## Quick Start
 
 ### Option A — Local Postgres (recommended for this demo)
 
 ```bash
-# 1. Install deps
+# 1. Install deps  (if prompted, run `pnpm approve-builds` to allow esbuild — optional)
 pnpm install
 
 # 2. Create databases (once)
 createdb servicing_mini_dev
 createdb servicing_mini_test
+# If `createdb` isn't available or your Postgres uses password auth, use psql instead:
+#   psql -U postgres -c "CREATE DATABASE servicing_mini_dev;"
+#   psql -U postgres -c "CREATE DATABASE servicing_mini_test;"
 
 # 3. Copy env
 cp .env.example .env.local
-# Edit DATABASE_URL if your Postgres isn't at localhost:5432
+# Default DATABASE_URL assumes Postgres at localhost:5432 with no password.
+# If yours needs a user/password, set the full form:
+#   DATABASE_URL=postgresql://USER:PASSWORD@localhost:5432/servicing_mini_dev
 
 # 4. Migrate + seed
 pnpm db:migrate
@@ -40,13 +50,17 @@ pnpm db:seed
 # 5. Run
 pnpm dev
 # → http://localhost:3000
+
+# (optional) run the test suite
+pnpm test
 ```
 
-### Option B — Docker
+### Option B — Docker (no local Postgres needed)
 
 ```bash
 docker compose up -d        # starts Postgres on port 5434
-# then set DATABASE_URL=postgresql://postgres:postgres@localhost:5434/servicing_mini_dev
+# then set DATABASE_URL in .env.local:
+#   DATABASE_URL=postgresql://postgres:postgres@localhost:5434/servicing_mini_dev
 pnpm db:migrate && pnpm db:seed
 pnpm dev
 ```
